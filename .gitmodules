@@ -10,3 +10,6 @@
 [submodule "bundle/flattown"]
 	path = bundle/flattown
 	url = https://github.com/blerins/flattown.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
