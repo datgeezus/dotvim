@@ -7,3 +7,6 @@
 [submodule "/home/jss/.vim/bundle/vim-airline"]
 	path = /home/jss/.vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "bundle/flattown"]
+	path = bundle/flattown
+	url = https://github.com/blerins/flattown.git
