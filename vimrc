@@ -36,5 +36,5 @@ nnoremap k gk
 "nnoremap E $
 
 "-- Leader shortcuts
-let mapleader=","   " leader is ','
+let mapleader = "," " leader is ','
 
