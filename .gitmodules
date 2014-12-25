@@ -16,3 +16,9 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "bundle/flattr"]
+	path = bundle/flattr
+	url = https://github.com/farseer90718/flattr.vim.git
+[submodule "bundle/iceberg"]
+	path = bundle/iceberg
+	url = https://github.com/cocopon/iceberg.vim.git

@@ -2,8 +2,6 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-colorscheme flattown
-
 if has('gui_running')
 	set guifont=DejaVu\ Sans\ Mono\ Book\ 8
 endif
@@ -21,6 +19,12 @@ set number			" show line numbers
 set cursorline      " highlight current line
 set wildmenu        " visual autocomplete for command menu
 set showmatch       " highlight matching [{()}]
+set background=dark " dark background
+set t_Co=256        " Colors
+"colorscheme flattown
+"colorscheme flattr
+colorscheme iceberg  
+
 
 "-- Searching
 set incsearch       " search as characters are entered
