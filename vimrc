@@ -13,6 +13,7 @@ endif
 "-- Spaces and tabs
 set tabstop=4		" number of visual spaces per tab
 set softtabstop=4	" number of spaces in tab when editting
+set shiftwidth=4
 set expandtab		" tabs as spaces
 
 "-- UI config
