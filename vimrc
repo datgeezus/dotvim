@@ -6,7 +6,14 @@ if has('gui_running')
 	set guifont=DejaVu\ Sans\ Mono\ Book\ 8
 endif
 
+""" REMAPS
 :noremap ; :
+let mapleader = "," " leader is ','
+" quick pairs
+imap <leader>' ''<ESC>i
+imap <leader>" ""<ESC>i
+imap <leader>( ()<ESC>i
+imap <leader>[ []<ESC>i
 
 "-- Spaces and tabs
 set tabstop=4		" number of visual spaces per tab
@@ -40,6 +47,10 @@ nnoremap k gk
 "nnoremap B ^
 "nnoremap E $
 
-"-- Leader shortcuts
-let mapleader = "," " leader is ','
 
+""" PLUGINS
+"-- Airline
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
