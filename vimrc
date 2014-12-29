@@ -23,6 +23,7 @@ set shiftwidth=4
 set expandtab		" tabs as spaces
 
 "-- UI config
+set encoding=utf-8  " encoding
 set number			" show line numbers
 set cursorline      " highlight current line
 set wildmenu        " visual autocomplete for command menu
