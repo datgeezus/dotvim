@@ -83,3 +83,6 @@ let g:airline_right_sep = '❮'   " Right separator
 let g:airline#extensions#whitespace#enabled = 1     " enable detection of whitespace
 let g:airline#extensions#whitespace#symbol = '!'
 let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
+
+"-- Indent Line
+let g:indentLine_char = '︙'
