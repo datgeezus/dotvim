@@ -8,7 +8,8 @@ endif
 
 """ REMAPS
 :noremap ; :
-let mapleader = "," " leader is ','
+:map <space> <leader>
+
 " quick pairs
 imap <leader>' ''<ESC>i
 imap <leader>" ""<ESC>i
@@ -47,6 +48,8 @@ nnoremap k gk
 "nnoremap B ^
 "nnoremap E $
 
+"-- Misc
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
 
 """ PLUGINS
 "-- Airline

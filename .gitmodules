@@ -7,18 +7,12 @@
 [submodule "/home/jss/.vim/bundle/vim-airline"]
 	path = /home/jss/.vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
-[submodule "bundle/flattown"]
-	path = bundle/flattown
-	url = https://github.com/blerins/flattown.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "bundle/flattr"]
-	path = bundle/flattr
-	url = https://github.com/farseer90718/flattr.vim.git
 [submodule "bundle/iceberg"]
 	path = bundle/iceberg
 	url = https://github.com/cocopon/iceberg.vim.git
