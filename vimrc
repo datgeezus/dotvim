@@ -51,7 +51,15 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markd
 
 """ PLUGINS
 "-- Airline
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
+" Buffers
+let g:airline#extensions#tabline#enabled = 1        " enable buffers
+let g:airline#extensions#tabline#left_sep = ' '     " 
+let g:airline#extensions#tabline#left_alt_sep = '|' " 
+let g:airline#extensions#tabline#fnamemod = ':t'    " show only names
+" Separator symbols
+let g:airline_left_sep = '❯'    " Left separator
+let g:airline_right_sep = '❮'   " Right separator
+" Whitespace
+let g:airline#extensions#whitespace#enabled = 1     " enable detection of whitespace
+let g:airline#extensions#whitespace#symbol = '!'
+let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
