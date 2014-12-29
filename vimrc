@@ -7,8 +7,12 @@ if has('gui_running')
 endif
 
 """ REMAPS
-:noremap ; :
-:map <space> <leader>
+noremap ; :
+map <space> <leader>
+" insert tab
+vnoremap > >gv
+" delete tab
+vnoremap < <gv
 
 " quick pairs
 imap <leader>' ''<ESC>i
@@ -52,6 +56,21 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markd
 
 """ PLUGINS
 "-- Airline
+" UI
+let g:airline_mode_map = {
+      \ '__' : '-',
+      \ 'n'  : 'N',
+      \ 'i'  : 'I',
+      \ 'R'  : 'R',
+      \ 'c'  : 'C',
+      \ 'v'  : 'V',
+      \ 'V'  : 'V-L',
+      \ '' : 'V-B',
+      \ 's'  : 'S',
+      \ 'S'  : 'S-L',
+      \ }
+let g:airline_theme             = 'powerlineish'
+let g:airline_enable_syntastic  = 1
 " Buffers
 let g:airline#extensions#tabline#enabled = 1        " enable buffers
 let g:airline#extensions#tabline#left_sep = ' '     " 
