@@ -29,8 +29,6 @@ set wildmenu        " visual autocomplete for command menu
 set showmatch       " highlight matching [{()}]
 set background=dark " dark background
 set t_Co=256        " Colors
-"colorscheme flattown
-"colorscheme flattr
 colorscheme iceberg  
 
 
