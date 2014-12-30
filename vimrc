@@ -2,6 +2,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set nocompatible
+inoremap jj <ESC>
 
 if has('gui_running')
 	set guifont=DejaVu\ Sans\ Mono\ Book\ 8
@@ -60,13 +61,15 @@ nnoremap k gk
 "nnoremap B ^
 "nnoremap E $
 " move lines vertically
-nnoremap <up> ddkp
-nnoremap <down> ddp
+nmap <up>       [e
+nmap <down>     ]e
+vmap <up>       [egv
+vmap <down>     ]egv
 " move lines horizontally
-nmap <left> <<
-nmap <right> >>
-vmap <left> <gv
-vmap <right> <gv
+nmap <left>     <<
+nmap <right>    >>
+vmap <left>     <gv
+vmap <right>    <gv
 
 "-- Misc
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
