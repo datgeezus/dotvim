@@ -28,3 +28,6 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/vim-unimpared"]
+	path = bundle/vim-unimpared
+	url = https://github.com/tpope/vim-unimpaired.git
