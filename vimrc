@@ -41,8 +41,16 @@ colorscheme iceberg
 "-- Searching
 set incsearch       " search as characters are entered
 set hlsearch        " highlight matches
+set ignorecase      " case-sensitive search intelligently
+set smartcase       " 
+" normal regex
+nnoremap / /\v
+vnoremap / /\v
 " turn off highlight
 nnoremap <leader><space> :nohlsearch<CR>
+" move along brackets
+nnoremap <tab> %
+vnoremap <tab> %
 
 "-- Movement
 " move vertically by visual line
@@ -51,6 +59,14 @@ nnoremap k gk
 " move to the beginning/end of line
 "nnoremap B ^
 "nnoremap E $
+" move lines vertically
+nnoremap <up> ddkp
+nnoremap <down> ddp
+" move lines horizontally
+nmap <left> <<
+nmap <right> >>
+vmap <left> <gv
+vmap <right> <gv
 
 "-- Misc
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
