@@ -1,6 +1,7 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+set nocompatible
 
 if has('gui_running')
 	set guifont=DejaVu\ Sans\ Mono\ Book\ 8
