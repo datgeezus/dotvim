@@ -1,8 +1,8 @@
+" vim:fdm=marker
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set nocompatible
-inoremap jj <ESC>
 
 if has('gui_running')
 	set guifont=DejaVu\ Sans\ Mono\ Book\ 8
@@ -11,10 +11,8 @@ endif
 """ REMAPS
 noremap ; :
 map <space> <leader>
-" insert tab
-vnoremap > >gv
-" delete tab
-vnoremap < <gv
+inoremap jj <ESC>
+
 
 " quick pairs
 imap <leader>' ''<ESC>i
@@ -60,23 +58,43 @@ nnoremap k gk
 " move to the beginning/end of line
 "nnoremap B ^
 "nnoremap E $
-" move lines vertically
-nmap <up>       [e
-nmap <down>     ]e
-vmap <up>       [egv
-vmap <down>     ]egv
+" bubble single lines
+nmap <up>   [e
+nmap <down> ]e
+" bubble multiple lines
+vmap <up>   [egv
+vmap <down> ]egv
 " move lines horizontally
-nmap <left>     <<
-nmap <right>    >>
-vmap <left>     <gv
-vmap <right>    <gv
+nmap <left>  <<
+nmap <right> >>
+vmap <left>  <'[V']
+vmap <right> >'[V']
+" window-movements
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+" window split
+nmap <leader>s :split<CR>
+imap <leader>s :split<CR>
+nmap <leader>v :vsplit<CR>
+imap <leader>v :vsplit<CR>
 
-"-- Misc
+
+" MISC {{{ 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
+" get current path
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+" edit file in current window, h-split, v-split, tab
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+" }}}
 
-""" PLUGINS
-"-- Airline
-" UI
+" PLUGINS {{{
+" - Airline {{{
+" -- UI
 let g:airline_mode_map = {
       \ '__' : '-',
       \ 'n'  : 'N',
@@ -91,18 +109,22 @@ let g:airline_mode_map = {
       \ }
 let g:airline_theme             = 'powerlineish'
 let g:airline_enable_syntastic  = 1
-" Buffers
+" -- Buffers
 let g:airline#extensions#tabline#enabled = 1        " enable buffers
 let g:airline#extensions#tabline#left_sep = ' '     " 
 let g:airline#extensions#tabline#left_alt_sep = '|' " 
 let g:airline#extensions#tabline#fnamemod = ':t'    " show only names
-" Separator symbols
+" -- Separator symbols
 let g:airline_left_sep = '❯'    " Left separator
 let g:airline_right_sep = '❮'   " Right separator
-" Whitespace
-let g:airline#extensions#whitespace#enabled = 1     " enable detection of whitespace
-let g:airline#extensions#whitespace#symbol = '!'
-let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
-
-"-- Indent Line
+"   }}}
+" - Indent Line {{{ 
 let g:indentLine_char = '︙'
+"   }}}
+" - CtrlP {{{
+let g:ctrlp_match_window = 'top,order:btt,min:1,max:10,results:10'
+"   }}}
+" - NERDTree {{{
+:nmap <leader>b :NERDTreeToggle<CR>
+"   }}}
+" }}}
