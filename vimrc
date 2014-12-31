@@ -84,7 +84,7 @@ imap <leader>v :vsplit<CR>
 " MISC {{{ 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
 " get current path
-cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<CR>
 " edit file in current window, h-split, v-split, tab
 map <leader>ew :e %%
 map <leader>es :sp %%
