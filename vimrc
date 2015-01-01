@@ -119,7 +119,9 @@ let g:airline_left_sep = '❯'    " Left separator
 let g:airline_right_sep = '❮'   " Right separator
 "   }}}
 " - Indent Line {{{ 
-let g:indentLine_char = '︙'
+let g:indentLine_char = '┆'
+let g:indentLine_color_term = 236
+let g:indentLine_color_gui = '#303030'
 "   }}}
 " - CtrlP {{{
 let g:ctrlp_match_window = 'top,order:btt,min:1,max:10,results:10'
