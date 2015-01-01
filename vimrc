@@ -36,7 +36,6 @@ set background=dark " dark background
 set t_Co=256        " Colors
 colorscheme iceberg  
 
-
 "-- Searching
 set incsearch       " search as characters are entered
 set hlsearch        " highlight matches
