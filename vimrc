@@ -31,6 +31,7 @@ set encoding=utf-8  " encoding
 set number			" show line numbers
 set cursorline      " highlight current line
 set wildmenu        " visual autocomplete for command menu
+set hidden          " hidden buffers
 set showmatch       " highlight matching [{()}]
 set background=dark " dark background
 set t_Co=256        " Colors
