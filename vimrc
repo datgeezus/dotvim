@@ -5,7 +5,17 @@ filetype plugin indent on
 set nocompatible
 
 if has('gui_running')
-	set guifont=DejaVu\ Sans\ Mono\ Book\ 8
+    if has("win32")
+        " set guifont=Consolas:h10
+        set guifont=DejaVu\ Sans\ Mono:h8
+        source $VIMRUNTIME/mswin.vim
+        behave mswin
+    else
+        set guifont=DejaVu\ Sans\ Mono\ Book\ 8
+    endif
+
+    set guioptions -=T          " Hide the toolbar
+    set lines=100 columns =100  " Initial window size
 endif
 
 """ REMAPS
