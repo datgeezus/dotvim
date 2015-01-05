@@ -90,8 +90,10 @@ imap <leader>s :split<CR>
 nmap <leader>v :vsplit<CR>
 imap <leader>v :vsplit<CR>
 " buffer movement
-:map <C-PageDown> :bnext<CR>
-:map <C-PageUp> :bprev<CR
+map <C-PageDown>    :bnext<CR>
+map <C-PageUp>  :bprev<CR>
+map <leader>l   :bnext<CR>
+map <leader>h   :bprev<CR>
 
 " MISC {{{ 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
