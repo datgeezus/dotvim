@@ -36,6 +36,11 @@ set softtabstop=4	" number of spaces in tab when editting
 set shiftwidth=4
 set expandtab		" tabs as spaces
 
+" Temp files
+silent execute '!mkdir "'.$VIMRUNTIME.'/temp"'
+set backupdir=$VIMRUNTIME/temp//
+set directory=$VIMRUNTIME/temp//
+
 "-- UI config
 set encoding=utf-8  " encoding
 set number			" show line numbers
@@ -47,7 +52,7 @@ set background=dark " dark background
 set t_Co=256        " Colors
 colorscheme iceberg  
 
-"-- Searching
+"-- Search
 set incsearch       " search as characters are entered
 set hlsearch        " highlight matches
 set ignorecase      " case-sensitive search intelligently
@@ -61,7 +66,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <tab> %
 vnoremap <tab> %
 
-"-- Movement
+" MOVEMENT {{{
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
@@ -95,6 +100,7 @@ map <C-PageUp>  :bprev<CR>
 map <leader>l   :bnext<CR>
 map <leader>h   :bprev<CR>
 map <leader>x   :bd<CR>
+" }}}
 
 " MISC {{{ 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
@@ -146,5 +152,6 @@ let g:ctrlp_match_window = 'top,order:btt,min:1,max:10,results:10'
 "   }}}
 " - Vim Notes {{{
 let g:notes_directories = ["~/Documents/Notes"]
+let g:notes_suffix = '.txt'
 "   }}}
 " }}}
