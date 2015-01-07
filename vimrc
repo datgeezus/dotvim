@@ -94,6 +94,7 @@ map <C-PageDown>    :bnext<CR>
 map <C-PageUp>  :bprev<CR>
 map <leader>l   :bnext<CR>
 map <leader>h   :bprev<CR>
+map <leader>x   :bd<CR>
 
 " MISC {{{ 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
@@ -142,5 +143,8 @@ let g:ctrlp_match_window = 'top,order:btt,min:1,max:10,results:10'
 "   }}}
 " - NERDTree {{{
 :nmap <leader>b :NERDTreeToggle<CR>
+"   }}}
+" - Vim Notes {{{
+let g:notes_directories = ["~/Documents/Notes"]
 "   }}}
 " }}}
