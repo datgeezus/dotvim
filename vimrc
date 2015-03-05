@@ -6,6 +6,7 @@ set nocompatible
 
 if has('gui_running')
     if has("win32")
+        " set guifont=Inconsolata:h10
         " set guifont=Consolas:h10
         set guifont=DejaVu\ Sans\ Mono:h8
         source $VIMRUNTIME/mswin.vim
