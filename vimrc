@@ -51,7 +51,9 @@ set hidden          " hidden buffers
 set showmatch       " highlight matching [{()}]
 set background=dark " dark background
 set t_Co=256        " Colors
-colorscheme iceberg  
+" colorscheme iceberg  
+" colorscheme mushroom
+colorscheme flatlandia
 
 "-- Search
 set incsearch       " search as characters are entered
