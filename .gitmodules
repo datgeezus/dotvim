@@ -43,3 +43,6 @@
 [submodule "bundle/mushroom"]
 	path = bundle/mushroom
 	url = https://github.com/mtglsk/mushroom.git
+[submodule "bundle/flatlandia"]
+	path = bundle/flatlandia
+	url = https://github.com/jordwalke/flatlandia.git
