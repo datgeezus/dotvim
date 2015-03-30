@@ -52,3 +52,6 @@
 [submodule "bundle/badwolf"]
 	path = bundle/badwolf
 	url = https://github.com/sjl/badwolf.git
+[submodule "bundle/git-gutter"]
+	path = bundle/git-gutter
+	url = https://github.com/airblade/vim-gitgutter.git
