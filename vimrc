@@ -38,9 +38,11 @@ set shiftwidth=4
 set expandtab		" tabs as spaces
 
 " Temp files
-silent execute '!mkdir "'.$VIMRUNTIME.'/temp"'
-set backupdir=$VIMRUNTIME/temp//
-set directory=$VIMRUNTIME/temp//
+if !isdirectory($HOME."/Documents/_vimtemp")
+    call mkdir($HOME."/Documents/_vimtemp", "p")
+endif
+set backupdir=$HOME/Documents/_vimtemp//
+set directory=$HOME/Documents/_vimtemp//
 
 "-- UI config
 set encoding=utf-8  " encoding
@@ -156,5 +158,14 @@ let g:ctrlp_match_window = 'top,order:btt,min:1,max:10,results:10'
 " - Vim Notes {{{
 let g:notes_directories = ["~/Documents/Notes"]
 let g:notes_suffix = '.txt'
+"   }}}
+" - Syntastic {{{
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 "   }}}
 " }}}
