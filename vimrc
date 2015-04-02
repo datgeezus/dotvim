@@ -51,11 +51,12 @@ set cursorline      " highlight current line
 set wildmenu        " visual autocomplete for command menu
 set hidden          " hidden buffers
 set showmatch       " highlight matching [{()}]
-set background=dark " dark background
 set t_Co=256        " Colors
+set background=dark " dark background
 " colorscheme iceberg  
 " colorscheme mushroom
-colorscheme flatlandia
+" colorscheme flatlandia
+colorscheme solarized
 
 "-- Search
 set incsearch       " search as characters are entered
@@ -150,7 +151,8 @@ let g:indentLine_color_term = 236
 let g:indentLine_color_gui = '#303030'
 "   }}}
 " - CtrlP {{{
-let g:ctrlp_match_window = 'top,order:btt,min:1,max:10,results:10'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
+let g:ctrlp_working_path_mode = 'a'   " Search from current file
 "   }}}
 " - NERDTree {{{
 :nmap <leader>b :NERDTreeToggle<CR>
@@ -167,5 +169,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+"   }}}
+" - GitGutter {{{
+let g:gitgutter_enabled = 0
+nnoremap <leader>g :GitGutterToggle<CR>
 "   }}}
 " }}}
