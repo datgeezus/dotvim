@@ -53,10 +53,14 @@ set hidden          " hidden buffers
 set showmatch       " highlight matching [{()}]
 set t_Co=256        " Colors
 set background=dark " dark background
-" colorscheme iceberg  
-" colorscheme mushroom
-" colorscheme flatlandia
-colorscheme solarized
+if has ('gui_running')
+    " colorscheme mushroom
+    " colorscheme flatlandia
+    colorscheme solarized
+else
+    colorscheme iceberg  
+endif
+
 
 "-- Search
 set incsearch       " search as characters are entered
