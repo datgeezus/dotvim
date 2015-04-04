@@ -139,10 +139,10 @@ let g:airline_mode_map = {
       \ 'S'  : 'S-L',
       \ }
 " let g:airline_theme = 'powerlineish'
-" let g:airline_theme = 'sol'
+let g:airline_theme = 'sol'
 " let g:airline_theme = 'tomorrow'
 " let g:airline_theme = 'base16'
-let g:airline_theme = 'airlineish'
+" let g:airline_theme = 'airlineish'
 let g:airline#extension#syntatic#enabled = 1
 let g:airline#extensions#ctrlp#show_adjacent_modes = 1
 " -- Buffers
