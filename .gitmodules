@@ -58,3 +58,6 @@
 [submodule "bundle/solarize"]
 	path = bundle/solarize
 	url = https://github.com/altercation/vim-colors-solarized
+[submodule "bundle/airlineish"]
+	path = bundle/airlineish
+	url = https://github.com/paranoida/vim-airlineish.git
