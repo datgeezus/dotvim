@@ -170,13 +170,6 @@ let g:indentLine_color_gui = '#303030'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
 let g:ctrlp_working_path_mode = 0   " Search from current file
 "   }}}
-" - NERDTree {{{
-:nmap <leader>b :NERDTreeToggle<CR>
-"   }}}
-" - Vim Notes {{{
-let g:notes_directories = ["~/Documents/Notes"]
-let g:notes_suffix = '.txt'
-"   }}}
 " - Syntastic {{{
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
