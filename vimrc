@@ -138,16 +138,27 @@ let g:airline_mode_map = {
       \ 's'  : 'S',
       \ 'S'  : 'S-L',
       \ }
-let g:airline_theme             = 'powerlineish'
-let g:airline_enable_syntastic  = 1
+" let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'sol'
+" let g:airline_theme = 'tomorrow'
+" let g:airline_theme = 'base16'
+let g:airline#extension#syntatic#enabled = 1
+let g:airline#extensions#ctrlp#show_adjacent_modes = 1
 " -- Buffers
 let g:airline#extensions#tabline#enabled = 1        " enable buffers
 let g:airline#extensions#tabline#left_sep = ' '     " 
 let g:airline#extensions#tabline#left_alt_sep = '|' " 
 let g:airline#extensions#tabline#fnamemod = ':t'    " show only names
-" -- Separator symbols
+" -- Symbols
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
 let g:airline_left_sep = '❯'    " Left separator
 let g:airline_right_sep = '❮'   " Right separator
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = 'Ξ'
 "   }}}
 " - Indent Line {{{ 
 let g:indentLine_char = '┆'
@@ -156,7 +167,7 @@ let g:indentLine_color_gui = '#303030'
 "   }}}
 " - CtrlP {{{
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
-let g:ctrlp_working_path_mode = 'a'   " Search from current file
+let g:ctrlp_working_path_mode = 0   " Search from current file
 "   }}}
 " - NERDTree {{{
 :nmap <leader>b :NERDTreeToggle<CR>
