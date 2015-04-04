@@ -61,3 +61,6 @@
 [submodule "bundle/airlineish"]
 	path = bundle/airlineish
 	url = https://github.com/paranoida/vim-airlineish.git
+[submodule "bundle/riv"]
+	path = bundle/riv
+	url = https://github.com/Rykka/riv.vim.git
