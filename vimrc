@@ -145,6 +145,7 @@ let g:airline_theme = 'sol'
 " let g:airline_theme = 'airlineish'
 let g:airline#extension#syntatic#enabled = 1
 let g:airline#extensions#ctrlp#show_adjacent_modes = 1
+let g:airline#extensions#tabline#enabled = 1
 " -- Buffers
 let g:airline#extensions#tabline#enabled = 1        " enable buffers
 let g:airline#extensions#tabline#left_sep = ' '     " 
