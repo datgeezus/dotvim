@@ -184,4 +184,7 @@ let g:syntastic_check_on_wq = 0
 let g:gitgutter_enabled = 0
 nnoremap <leader>g :GitGutterToggle<CR>
 "   }}}
+" - Python-mode {{{
+let g:pymode = 0
+"   }}}
 " }}}
