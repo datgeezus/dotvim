@@ -61,7 +61,6 @@ else
     colorscheme iceberg  
 endif
 
-
 "-- Search
 set incsearch       " search as characters are entered
 set hlsearch        " highlight matches
@@ -164,8 +163,8 @@ let g:airline_symbols.whitespace = 'Ξ'
 "   }}}
 " - Indent Line {{{ 
 let g:indentLine_char = '┆'
-let g:indentLine_color_term = 236
-let g:indentLine_color_gui = '#303030'
+let g:indentLine_color_term = 240
+let g:indentLine_color_gui = '#7070b0'
 "   }}}
 " - CtrlP {{{
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
