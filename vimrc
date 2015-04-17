@@ -32,10 +32,10 @@ imap <leader>( ()<ESC>i
 imap <leader>[ []<ESC>i
 
 "-- Spaces and tabs
-set tabstop=4		" number of visual spaces per tab
-set softtabstop=4	" number of spaces in tab when editting
+set tabstop=4       " number of visual spaces per tab
+set softtabstop=4   " number of spaces in tab when editting
 set shiftwidth=4
-set expandtab		" tabs as spaces
+set expandtab       " tabs as spaces
 
 " Temp files
 if !isdirectory($HOME."/Documents/_vimtemp")
@@ -46,7 +46,7 @@ set directory=$HOME/Documents/_vimtemp//
 
 "-- UI config
 set encoding=utf-8  " encoding
-set number			" show line numbers
+set number          " show line numbers
 set cursorline      " highlight current line
 set wildmenu        " visual autocomplete for command menu
 set hidden          " hidden buffers
@@ -60,6 +60,9 @@ if has ('gui_running')
 else
     colorscheme iceberg  
 endif
+
+set list
+set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 
 "-- Search
 set incsearch       " search as characters are entered
