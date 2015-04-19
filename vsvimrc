@@ -1,0 +1,83 @@
+" vim:fdm=marker
+
+""" REMAPS
+noremap ; :
+map <space> <leader>
+inoremap jj <ESC>
+
+" quick pairs
+imap <leader>' ''<ESC>i
+imap <leader>" ""<ESC>i
+imap <leader>( ()<ESC>i
+imap <leader>[ []<ESC>i
+
+"-- Spaces and tabs
+set tabstop=4       " number of visual spaces per tab
+set softtabstop=4   " number of spaces in tab when editting
+set shiftwidth=4
+set expandtab       " tabs as spaces
+
+"-- UI config
+set encoding=utf-8  " encoding
+set number          " show line numbers
+set cursorline      " highlight current line
+set hidden          " hidden buffers
+set showmatch       " highlight matching [{()}]
+
+"-- Search
+set incsearch       " search as characters are entered
+set hlsearch        " highlight matches
+set ignorecase      " case-sensitive search intelligently
+set smartcase       " 
+" normal regex
+nnoremap / /\v
+vnoremap / /\v
+" turn off highlight
+nnoremap <leader><space> :nohlsearch<CR>
+" move along brackets
+nnoremap <tab> %
+vnoremap <tab> %
+
+" MOVEMENT {{{
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+" move to the beginning/end of line
+"nnoremap B ^
+"nnoremap E $
+" Bubble single lines
+nmap <up> ddkP
+nmap <down> ddp
+" Bubble multiple lines
+vmap <up> xkP`[V`]
+vmap <down> xp`[V`]v
+" move lines horizontally
+nmap <left>  <<
+nmap <right> >>
+vmap <left>  <'[V']
+vmap <right> >'[V']
+" window-movements
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+" window split
+nmap <leader>s :split<CR>
+imap <leader>s :split<CR>
+nmap <leader>v :vsplit<CR>
+imap <leader>v :vsplit<CR>
+" buffer movement
+map <C-PageDown>    :bnext<CR>
+map <C-PageUp>  :bprev<CR>
+map <leader>l   :bnext<CR>
+map <leader>h   :bprev<CR>
+map <leader>x   :bd<CR>
+" }}}
+
+" get current path
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<CR>
+" edit file in current window, h-split, v-split, tab
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
