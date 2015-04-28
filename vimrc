@@ -189,4 +189,8 @@ nnoremap <leader>g :GitGutterToggle<CR>
 " - Python-mode {{{
 let g:pymode = 0
 "   }}}
+" - Riv {{{
+let g:riv_fold_auto_update = 0
+let g:riv_disable_folding = 1
+"   }}}
 " }}}
