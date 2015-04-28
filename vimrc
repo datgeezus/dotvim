@@ -210,6 +210,10 @@ autocmd BufNewFile,BufRead *.xml setlocal tabstop=2
 autocmd BufNewFile,BufRead *.xml setlocal shiftwidth=2
 autocmd BufNewFile,BufRead *.xml setlocal softtabstop=2
 autocmd BufNewFile,BufRead *.xml setlocal nowrap
+autocmd BufNewFile,BufRead *.xaml setlocal tabstop=2
+autocmd BufNewFile,BufRead *.xaml setlocal shiftwidth=2
+autocmd BufNewFile,BufRead *.xaml setlocal softtabstop=2
+autocmd BufNewFile,BufRead *.xaml setlocal nowrap
 autocmd BufNewFile,BufRead *.json setlocal tabstop=2
 autocmd BufNewFile,BufRead *.json setlocal shiftwidth=2
 autocmd BufNewFile,BufRead *.json setlocal softtabstop=2
