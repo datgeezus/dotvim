@@ -112,10 +112,14 @@ map <C-PageUp>  :bprev<CR>
 map <leader>l   :bnext<CR>
 map <leader>h   :bprev<CR>
 map <leader>x   :bd<CR>
+" centner next/prev search item
+nmap n nzz
+nmap N Nzz
 " }}}
 
 " MISC {{{ 
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
+" folds
+set foldlevelstart=99
 " get current path
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<CR>
 " edit file in current window, h-split, v-split, tab
@@ -189,4 +193,21 @@ nnoremap <leader>g :GitGutterToggle<CR>
 " - Python-mode {{{
 let g:pymode = 0
 "   }}}
+" }}}
+
+" Autogorups {{{
+augroup configgroup
+autocmd!
+autocmd FileType python setlocal foldmethod=indent
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
+autocmd BufEnter *.xaml setlocal filetype=xml
+autocmd BufEnter Makefile setlocal noexpandtab
+autocmd BufNewFile,BufRead *.xml setlocal tabstop=2
+autocmd BufNewFile,BufRead *.xml setlocal shiftwidth=2
+autocmd BufNewFile,BufRead *.xml setlocal softtabstop=2
+autocmd BufNewFile,BufRead *.xml setlocal nowrap
+autocmd BufNewFile,BufRead *.json setlocal tabstop=2
+autocmd BufNewFile,BufRead *.json setlocal shiftwidth=2
+autocmd BufNewFile,BufRead *.json setlocal softtabstop=2
+augroup END
 " }}}
