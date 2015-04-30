@@ -39,6 +39,9 @@ nnoremap <tab> %
 vnoremap <tab> %
 
 " MOVEMENT {{{
+" move to the center of the screen on searches
+nmap n nzz
+nmap N Nzz
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk

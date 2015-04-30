@@ -16,6 +16,8 @@ if has('gui_running')
     endif
 
     set guioptions -=T          " Hide the toolbar
+    set guioptions-=r           "remove right scroll bar
+    set guioptions-=L           "remove left scroll bar
     set lines=100 columns =100  " Initial window size
 endif
 
@@ -45,20 +47,21 @@ set backupdir=$HOME/Documents/_vimtemp//
 set directory=$HOME/Documents/_vimtemp//
 
 "-- UI config
-set encoding=utf-8  " encoding
-set number          " show line numbers
-set cursorline      " highlight current line
-set wildmenu        " visual autocomplete for command menu
-set hidden          " hidden buffers
-set showmatch       " highlight matching [{()}]
-set t_Co=256        " Colors
-set background=dark " dark background
+set encoding=utf-8      " encoding
+set number              " show line numbers
+set cursorline          " highlight current line
+set wildmenu            " visual autocomplete for command menu
+set hidden              " hidden buffers
+set showmatch           " highlight matching [{()}]
+set t_Co=256            " Colors
+set background=light    " dark background
 if has ('gui_running')
     " colorscheme mushroom
     " colorscheme flatlandia
+    let g:solarized_visibility = 'high'
     colorscheme solarized
 else
-    colorscheme iceberg  
+    colorscheme iceberg
 endif
 
 set list
@@ -68,7 +71,7 @@ set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set incsearch       " search as characters are entered
 set hlsearch        " highlight matches
 set ignorecase      " case-sensitive search intelligently
-set smartcase       " 
+set smartcase       "
 " normal regex
 nnoremap / /\v
 vnoremap / /\v
@@ -117,7 +120,7 @@ nmap n nzz
 nmap N Nzz
 " }}}
 
-" MISC {{{ 
+" MISC {{{
 " folds
 set foldlevelstart=99
 " get current path
@@ -145,7 +148,7 @@ let g:airline_mode_map = {
       \ 'S'  : 'S-L',
       \ }
 " let g:airline_theme = 'powerlineish'
-let g:airline_theme = 'sol'
+" let g:airline_theme = 'sol'
 " let g:airline_theme = 'tomorrow'
 " let g:airline_theme = 'base16'
 " let g:airline_theme = 'airlineish'
@@ -154,8 +157,8 @@ let g:airline#extensions#ctrlp#show_adjacent_modes = 1
 let g:airline#extensions#tabline#enabled = 1
 " -- Buffers
 let g:airline#extensions#tabline#enabled = 1        " enable buffers
-let g:airline#extensions#tabline#left_sep = ' '     " 
-let g:airline#extensions#tabline#left_alt_sep = '|' " 
+let g:airline#extensions#tabline#left_sep = ' '     "
+let g:airline#extensions#tabline#left_alt_sep = '|' "
 let g:airline#extensions#tabline#fnamemod = ':t'    " show only names
 " -- Symbols
 if !exists('g:airline_symbols')
@@ -168,7 +171,7 @@ let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 "   }}}
-" - Indent Line {{{ 
+" - Indent Line {{{
 let g:indentLine_char = '┆'
 let g:indentLine_color_term = 240
 let g:indentLine_color_gui = '#7070b0'
@@ -197,12 +200,16 @@ let g:pymode = 0
 let g:riv_fold_auto_update = 0
 let g:riv_disable_folding = 1
 "   }}}
+" - Solarized {{{
+call togglebg#map("<F2>")
+"   }}}
 " }}}
 
 " Autogorups {{{
 augroup configgroup
 autocmd!
 autocmd FileType python setlocal foldmethod=indent
+autocmd FileType python setlocal foldnestmax=1
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
 autocmd BufEnter *.xaml setlocal filetype=xml
 autocmd BufEnter Makefile setlocal noexpandtab
