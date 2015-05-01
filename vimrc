@@ -32,7 +32,6 @@ imap <leader>' ''<ESC>i
 imap <leader>" ""<ESC>i
 imap <leader>( ()<ESC>i
 imap <leader>[ []<ESC>i
-
 "-- Spaces and tabs
 set tabstop=4       " number of visual spaces per tab
 set softtabstop=4   " number of spaces in tab when editting
@@ -66,6 +65,7 @@ endif
 
 set list
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
+set colorcolumn=80
 
 "-- Search
 set incsearch       " search as characters are entered
@@ -208,6 +208,8 @@ call togglebg#map("<F2>")
 " Autogorups {{{
 augroup configgroup
 autocmd!
+" autocmd BufEnter * highlight OverLength ctermbg=darkgray guibg=#592929
+" autocmd BufEnter * match OverLength /\%80v.*/
 autocmd FileType python setlocal foldmethod=indent
 autocmd FileType python setlocal foldnestmax=1
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
@@ -224,5 +226,6 @@ autocmd BufNewFile,BufRead *.xaml setlocal nowrap
 autocmd BufNewFile,BufRead *.json setlocal tabstop=2
 autocmd BufNewFile,BufRead *.json setlocal shiftwidth=2
 autocmd BufNewFile,BufRead *.json setlocal softtabstop=2
+autocmd BufEnter *.rst setlocal colorcolumn+=100
 augroup END
 " }}}
