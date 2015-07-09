@@ -58,7 +58,8 @@ if has ('gui_running')
     " colorscheme mushroom
     " colorscheme flatlandia
     let g:solarized_visibility = 'high'
-    colorscheme solarized
+    " colorscheme solarized
+    colorscheme papercolor
 else
     colorscheme iceberg
 endif
@@ -148,10 +149,11 @@ let g:airline_mode_map = {
       \ 'S'  : 'S-L',
       \ }
 " let g:airline_theme = 'powerlineish'
-" let g:airline_theme = 'sol'
+let g:airline_theme = 'sol'
 " let g:airline_theme = 'tomorrow'
 " let g:airline_theme = 'base16'
 " let g:airline_theme = 'airlineish'
+" let g:airline_theme = 'PaperColor'
 let g:airline#extension#syntatic#enabled = 1
 let g:airline#extensions#ctrlp#show_adjacent_modes = 1
 let g:airline#extensions#tabline#enabled = 1
