@@ -131,6 +131,8 @@ map <leader>ew :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
+" toggle between relative and absolute line numbers
+nnoremap <F3> :set relativenumber!<CR>
 " }}}
 
 " PLUGINS {{{
