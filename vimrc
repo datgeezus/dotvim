@@ -150,8 +150,8 @@ let g:airline_mode_map = {
       \ 's'  : 'S',
       \ 'S'  : 'S-L',
       \ }
-" let g:airline_theme = 'powerlineish'
-let g:airline_theme = 'sol'
+let g:airline_theme = 'powerlineish'
+" let g:airline_theme = 'sol'
 " let g:airline_theme = 'tomorrow'
 " let g:airline_theme = 'base16'
 " let g:airline_theme = 'airlineish'
@@ -206,6 +206,14 @@ let g:riv_disable_folding = 1
 "   }}}
 " - Solarized {{{
 call togglebg#map("<F2>")
+"   }}}
+" - python-sintax {{{
+let g:python_version_2 = 1
+lef g:python_highlight_builtins = 1
+let g:python_highlight_string_formatting = 1
+let g:python_highlight_string_format = 1
+let g:python_highlight_string_templates = 1
+let g:python_print_as_function = 1
 "   }}}
 " }}}
 
