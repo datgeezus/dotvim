@@ -53,7 +53,7 @@ set wildmenu            " visual autocomplete for command menu
 set hidden              " hidden buffers
 set showmatch           " highlight matching [{()}]
 set t_Co=256            " Colors
-set background=light    " dark background
+set background=dark     " dark background
 if has ('gui_running')
     " colorscheme mushroom
     " colorscheme flatlandia
