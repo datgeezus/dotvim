@@ -73,3 +73,6 @@
 [submodule "bundle/papercolor"]
 	path = bundle/papercolor
 	url = https://github.com/NLKNguyen/papercolor-theme.git
+[submodule "bundle/gruvbox"]
+	path = bundle/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
