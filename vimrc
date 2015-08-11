@@ -59,7 +59,8 @@ if has ('gui_running')
     " colorscheme flatlandia
     let g:solarized_visibility = 'high'
     " colorscheme solarized
-    colorscheme papercolor
+    " colorscheme papercolor
+    colorscheme gruvbox
 else
     colorscheme iceberg
 endif
