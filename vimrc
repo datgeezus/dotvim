@@ -57,7 +57,7 @@ set background=dark     " dark background
 if has ('gui_running')
     " colorscheme mushroom
     " colorscheme flatlandia
-    let g:solarized_visibility = 'high'
+    " let g:solarized_visibility = 'high'
     " colorscheme solarized
     " colorscheme papercolor
     colorscheme gruvbox
@@ -151,7 +151,7 @@ let g:airline_mode_map = {
       \ 's'  : 'S',
       \ 'S'  : 'S-L',
       \ }
-let g:airline_theme = 'powerlineish'
+" let g:airline_theme = 'powerlineish'
 " let g:airline_theme = 'sol'
 " let g:airline_theme = 'tomorrow'
 " let g:airline_theme = 'base16'
