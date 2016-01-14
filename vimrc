@@ -54,6 +54,7 @@ set hidden              " hidden buffers
 set showmatch           " highlight matching [{()}]
 set t_Co=256            " Colors
 set background=dark     " dark background
+" set background=light     " dark background
 if has ('gui_running')
     " colorscheme mushroom
     " colorscheme flatlandia
@@ -153,7 +154,7 @@ let g:airline_mode_map = {
       \ }
 " let g:airline_theme = 'powerlineish'
 " let g:airline_theme = 'sol'
-" let g:airline_theme = 'tomorrow'
+let g:airline_theme = 'tomorrow'
 " let g:airline_theme = 'base16'
 " let g:airline_theme = 'airlineish'
 " let g:airline_theme = 'PaperColor'
@@ -229,6 +230,8 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markd
 autocmd BufEnter *.xaml setlocal filetype=xml
 autocmd BufEnter Makefile setlocal noexpandtab
 autocmd BufNewFile,BufRead *.xml setlocal tabstop=2
+autocmd BufNewFile,BufRead *.xml colorscheme papercolor
+autocmd BufNewFile,BufRead *.xml setlocal background=light
 autocmd BufNewFile,BufRead *.xml setlocal shiftwidth=2
 autocmd BufNewFile,BufRead *.xml setlocal softtabstop=2
 autocmd BufNewFile,BufRead *.xml setlocal nowrap
