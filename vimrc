@@ -194,6 +194,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+autocmd VimEnter * SyntasticToggleMode " disable syntastic by default
 "   }}}
 " - GitGutter {{{
 let g:gitgutter_enabled = 0
@@ -209,7 +210,7 @@ let g:riv_disable_folding = 1
 " - Solarized {{{
 call togglebg#map("<F2>")
 "   }}}
-" - python-sintax {{{
+" - python-syntax {{{
 let g:python_version_2 = 1
 lef g:python_highlight_builtins = 1
 let g:python_highlight_string_formatting = 1
