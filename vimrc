@@ -216,6 +216,10 @@ let g:python_highlight_string_format = 1
 let g:python_highlight_string_templates = 1
 let g:python_print_as_function = 1
 "   }}}
+" - LaTeX-Box {{{
+let g:LatexBox_build_dir = "build"
+let g:LatexBox_quickfix = 2
+"   }}}
 " }}}
 
 " Autogorups {{{
