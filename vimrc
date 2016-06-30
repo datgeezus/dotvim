@@ -63,7 +63,8 @@ if has ('gui_running')
     " colorscheme papercolor
     colorscheme gruvbox
 else
-    colorscheme iceberg
+    " colorscheme iceberg
+    colorscheme base16-ocean
 endif
 
 set list
