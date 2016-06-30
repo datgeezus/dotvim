@@ -64,6 +64,7 @@ if has ('gui_running')
     colorscheme gruvbox
 else
     " colorscheme iceberg
+    let base16colorspace=256
     colorscheme base16-ocean
 endif
 
