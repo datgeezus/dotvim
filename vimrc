@@ -61,7 +61,8 @@ if has ('gui_running')
     " let g:solarized_visibility = 'high'
     " colorscheme solarized
     " colorscheme papercolor
-    colorscheme gruvbox
+    " colorscheme gruvbox
+    colorscheme base16-ocean
 else
     " colorscheme iceberg
     let base16colorspace=256
@@ -120,6 +121,9 @@ map <C-PageUp>  :bprev<CR>
 map <leader>l   :bnext<CR>
 map <leader>h   :bprev<CR>
 map <leader>x   :bd<CR>
+map <C-n> :bnext<CR>
+map <C-b> :bprev<CR>
+map <C-x> :bd<CR>
 " centner next/prev search item
 nmap n nzz
 nmap N Nzz
@@ -127,6 +131,7 @@ nmap N Nzz
 
 " MISC {{{
 " folds
+set foldmethod=syntax
 set foldlevelstart=99
 " get current path
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<CR>
@@ -237,7 +242,7 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markd
 autocmd BufEnter *.xaml setlocal filetype=xml
 autocmd BufEnter Makefile setlocal noexpandtab
 autocmd BufNewFile,BufRead *.xml setlocal tabstop=2
-autocmd BufNewFile,BufRead *.xml colorscheme papercolor
+" autocmd BufNewFile,BufRead *.xml colorscheme papercolor
 autocmd BufNewFile,BufRead *.xml setlocal background=light
 autocmd BufNewFile,BufRead *.xml setlocal shiftwidth=2
 autocmd BufNewFile,BufRead *.xml setlocal softtabstop=2
