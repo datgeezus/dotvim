@@ -9,10 +9,8 @@ Plug 'sjl/badwolf'
 Plug 'chriskempson/base16-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'jordwalke/flatlandia'
-Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
-Plug 'cocopon/iceberg'
 Plug 'Yggdroot/indentLine'
 Plug 'tomasr/molokai'
 Plug 'mtglsk/mushroom'
@@ -21,9 +19,11 @@ Plug 'klen/python-mode'
 Plug 'Rykka/riv.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/syntastic'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-commentary'
 Plug 'elzr/vim-json'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
@@ -99,7 +99,7 @@ if has ('gui_running')
     colorscheme base16-ocean
 else
     let base16colorspace=256
-    colorscheme iceberg
+    colorscheme gruvbox
     " colorscheme base16-ocean
 endif
 
