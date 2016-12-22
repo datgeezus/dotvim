@@ -1,5 +1,39 @@
 " vim:fdm=marker
-execute pathogen#infect()
+" vim-plug {{{
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'LaTeX-Box-Team/LaTeX-Box'
+Plug 'paranoida/vim-airlineish'
+Plug 'sjl/badwolf'
+Plug 'chriskempson/base16-vim'
+Plug 'kien/ctrlp.vim'
+Plug 'jordwalke/flatlandia'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'morhetz/gruvbox'
+Plug 'cocopon/iceberg'
+Plug 'Yggdroot/indentLine'
+Plug 'tomasr/molokai'
+Plug 'mtglsk/mushroom'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'klen/python-mode'
+Plug 'Rykka/riv.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'scrooloose/syntastic'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-commentary'
+Plug 'elzr/vim-json'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
+Plug 'vimwiki/vimwiki'
+
+" Initialize plugin system
+call plug#end()
+" }}}
 syntax on
 filetype plugin indent on
 set nocompatible
