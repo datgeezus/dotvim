@@ -3,7 +3,7 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'LaTeX-Box-Team/LaTeX-Box'
+Plug 'lervag/vimtex'
 Plug 'paranoida/vim-airlineish'
 Plug 'sjl/badwolf'
 Plug 'chriskempson/base16-vim'
@@ -259,9 +259,8 @@ let g:python_highlight_string_format = 1
 let g:python_highlight_string_templates = 1
 let g:python_print_as_function = 1
 "   }}}
-" - LaTeX-Box {{{
-let g:LatexBox_build_dir = "build"
-let g:LatexBox_quickfix = 2
+" - vimtex {{{
+let g:tex_flavor = 'latex'
 "   }}}
 " }}}
 
