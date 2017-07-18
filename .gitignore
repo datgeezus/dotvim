@@ -1,3 +1,4 @@
 .netrwhist
-/autoload/paste.vim
+/autoload
 /bundle
+/plugged

@@ -30,6 +30,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vimwiki/vimwiki'
+Plug 'MaxSt/FlatColor'
+Plug 'valloric/youcompleteme'
 
 " Initialize plugin system
 call plug#end()
@@ -98,9 +100,11 @@ if has ('gui_running')
     " colorscheme gruvbox
     colorscheme base16-ocean
 else
+    " colorscheme gruvbox
+    " let g:flatcolor_termcolors = 16
+    " colorscheme flatcolor
     let base16colorspace=256
-    colorscheme gruvbox
-    " colorscheme base16-ocean
+    colorscheme base16-ocean
 endif
 
 set list
@@ -182,17 +186,17 @@ nnoremap <F3> :set relativenumber!<CR>
 " - Airline {{{
 " -- UI
 let g:airline_mode_map = {
-      \ '__' : '-',
-      \ 'n'  : 'N',
-      \ 'i'  : 'I',
-      \ 'R'  : 'R',
-      \ 'c'  : 'C',
-      \ 'v'  : 'V',
-      \ 'V'  : 'V-L',
-      \ '' : 'V-B',
-      \ 's'  : 'S',
-      \ 'S'  : 'S-L',
-      \ }
+            \ '__' : '-',
+            \ 'n'  : 'N',
+            \ 'i'  : 'I',
+            \ 'R'  : 'R',
+            \ 'c'  : 'C',
+            \ 'v'  : 'V',
+            \ 'V'  : 'V-L',
+            \ '' : 'V-B',
+            \ 's'  : 'S',
+            \ 'S'  : 'S-L',
+            \ }
 " let g:airline_theme = 'powerlineish'
 " let g:airline_theme = 'sol'
 let g:airline_theme = 'tomorrow'
@@ -266,27 +270,27 @@ let g:tex_flavor = 'latex'
 
 " Autogorups {{{
 augroup configgroup
-autocmd!
-" autocmd BufEnter * highlight OverLength ctermbg=darkgray guibg=#592929
-" autocmd BufEnter * match OverLength /\%80v.*/
-autocmd FileType python setlocal foldmethod=indent
-autocmd FileType python setlocal foldnestmax=1
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
-autocmd BufEnter *.xaml setlocal filetype=xml
-autocmd BufEnter Makefile setlocal noexpandtab
-autocmd BufNewFile,BufRead *.xml setlocal tabstop=2
-" autocmd BufNewFile,BufRead *.xml colorscheme papercolor
-autocmd BufNewFile,BufRead *.xml setlocal background=light
-autocmd BufNewFile,BufRead *.xml setlocal shiftwidth=2
-autocmd BufNewFile,BufRead *.xml setlocal softtabstop=2
-autocmd BufNewFile,BufRead *.xml setlocal nowrap
-autocmd BufNewFile,BufRead *.xaml setlocal tabstop=2
-autocmd BufNewFile,BufRead *.xaml setlocal shiftwidth=2
-autocmd BufNewFile,BufRead *.xaml setlocal softtabstop=2
-autocmd BufNewFile,BufRead *.xaml setlocal nowrap
-autocmd BufNewFile,BufRead *.json setlocal tabstop=2
-autocmd BufNewFile,BufRead *.json setlocal shiftwidth=2
-autocmd BufNewFile,BufRead *.json setlocal softtabstop=2
-autocmd BufEnter *.rst setlocal colorcolumn+=100
+    autocmd!
+    " autocmd BufEnter * highlight OverLength ctermbg=darkgray guibg=#592929
+    " autocmd BufEnter * match OverLength /\%80v.*/
+    autocmd FileType python setlocal foldmethod=indent
+    autocmd FileType python setlocal foldnestmax=1
+    autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
+    autocmd BufEnter *.xaml setlocal filetype=xml
+    autocmd BufEnter Makefile setlocal noexpandtab
+    autocmd BufNewFile,BufRead *.xml setlocal tabstop=2
+    " autocmd BufNewFile,BufRead *.xml colorscheme papercolor
+    autocmd BufNewFile,BufRead *.xml setlocal background=light
+    autocmd BufNewFile,BufRead *.xml setlocal shiftwidth=2
+    autocmd BufNewFile,BufRead *.xml setlocal softtabstop=2
+    autocmd BufNewFile,BufRead *.xml setlocal nowrap
+    autocmd BufNewFile,BufRead *.xaml setlocal tabstop=2
+    autocmd BufNewFile,BufRead *.xaml setlocal shiftwidth=2
+    autocmd BufNewFile,BufRead *.xaml setlocal softtabstop=2
+    autocmd BufNewFile,BufRead *.xaml setlocal nowrap
+    autocmd BufNewFile,BufRead *.json setlocal tabstop=2
+    autocmd BufNewFile,BufRead *.json setlocal shiftwidth=2
+    autocmd BufNewFile,BufRead *.json setlocal softtabstop=2
+    autocmd BufEnter *.rst setlocal colorcolumn+=100
 augroup END
 " }}}
