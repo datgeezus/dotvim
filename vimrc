@@ -32,6 +32,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'vimwiki/vimwiki'
 Plug 'MaxSt/FlatColor'
 Plug 'valloric/youcompleteme'
+Plugin 'leafgarland/typescript-vim'
 
 " Initialize plugin system
 call plug#end()
@@ -100,11 +101,11 @@ if has ('gui_running')
     " colorscheme gruvbox
     colorscheme base16-ocean
 else
-    " colorscheme gruvbox
+    colorscheme gruvbox
     " let g:flatcolor_termcolors = 16
     " colorscheme flatcolor
-    let base16colorspace=256
-    colorscheme base16-ocean
+    " let base16colorspace=256
+    " colorscheme base16-ocean
 endif
 
 set list
