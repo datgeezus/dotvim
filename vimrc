@@ -32,7 +32,8 @@ Plug 'tpope/vim-vinegar'
 Plug 'vimwiki/vimwiki'
 Plug 'MaxSt/FlatColor'
 Plug 'valloric/youcompleteme'
-Plugin 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'sarahlim/wild-cherry-vim'
 
 " Initialize plugin system
 call plug#end()
