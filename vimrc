@@ -92,6 +92,7 @@ set hidden              " hidden buffers
 set showmatch           " highlight matching [{()}]
 set t_Co=256            " Colors
 set background=dark     " dark background
+set termguicolors
 " set background=light     " dark background
 if has ('gui_running')
     " colorscheme mushroom
@@ -102,11 +103,12 @@ if has ('gui_running')
     " colorscheme gruvbox
     colorscheme base16-ocean
 else
-    colorscheme gruvbox
+    " colorscheme gruvbox
     " let g:flatcolor_termcolors = 16
     " colorscheme flatcolor
     " let base16colorspace=256
-    " colorscheme base16-ocean
+    colorscheme base16-ocean
+    " colorscheme wildcherry
 endif
 
 set list
@@ -201,7 +203,7 @@ let g:airline_mode_map = {
             \ }
 " let g:airline_theme = 'powerlineish'
 " let g:airline_theme = 'sol'
-let g:airline_theme = 'tomorrow'
+let g:airline_theme = 'distinguished'
 " let g:airline_theme = 'base16'
 " let g:airline_theme = 'airlineish'
 " let g:airline_theme = 'PaperColor'
