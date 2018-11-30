@@ -53,7 +53,9 @@ endif
 """ REMAPS
 noremap ; :
 map <space> <leader>
+let maplocalleader=","
 inoremap jj <ESC>
+inoremap jk <ESC>
 
 
 " quick pairs
@@ -94,11 +96,11 @@ if has ('gui_running')
     " colorscheme gruvbox
     colorscheme base16-ocean
 else
-    " colorscheme gruvbox
+    colorscheme gruvbox
     " let g:flatcolor_termcolors = 16
     " colorscheme flatcolor
     " let base16colorspace=256
-    colorscheme base16-ocean
+    " colorscheme base16-ocean
     " colorscheme wildcherry
 endif
 
@@ -155,7 +157,7 @@ map <leader>l   :bnext<CR>
 map <leader>h   :bprev<CR>
 map <leader>x   :bd<CR>
 map <C-n> :bnext<CR>
-map <C-b> :bprev<CR>
+map <C-N> :bprev<CR>
 map <C-x> :bd<CR>
 " centner next/prev search item
 nmap n nzz
@@ -261,6 +263,10 @@ let g:python_print_as_function = 1
 " - vimtex {{{
 let g:tex_flavor = 'latex'
 "   }}}
+" }}}
+
+" Orgmode {{{
+let g:org_agenda_files = ['~/org/*.org']
 " }}}
 
 " Autogorups {{{
