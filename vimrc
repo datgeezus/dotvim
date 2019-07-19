@@ -22,6 +22,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-speeddating'
 Plug 'vimwiki/vimwiki'
 Plug 'leafgarland/typescript-vim'
 Plug 'jceb/vim-orgmode'
@@ -54,7 +55,6 @@ endif
 noremap ; :
 map <space> <leader>
 let maplocalleader=","
-inoremap jj <ESC>
 inoremap jk <ESC>
 
 
