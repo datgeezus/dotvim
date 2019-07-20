@@ -86,6 +86,8 @@ set showmatch           " highlight matching [{()}]
 set t_Co=256            " Colors
 set background=dark     " dark background
 set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " set background=light     " dark background
 if has ('gui_running')
     " colorscheme mushroom
