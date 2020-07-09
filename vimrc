@@ -5,13 +5,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'lervag/vimtex'
 Plug 'chriskempson/base16-vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
 Plug 'klen/python-mode'
 Plug 'Rykka/riv.vim'
-Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -23,9 +21,10 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-speeddating'
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 Plug 'leafgarland/typescript-vim'
 Plug 'jceb/vim-orgmode'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " Initialize plugin system
 call plug#end()
@@ -250,9 +249,6 @@ let g:pymode = 0
 " - Riv {{{
 let g:riv_fold_auto_update = 0
 let g:riv_disable_folding = 1
-"   }}}
-" - Solarized {{{
-call togglebg#map("<F2>")
 "   }}}
 " - python-syntax {{{
 let g:python_version_2 = 1
