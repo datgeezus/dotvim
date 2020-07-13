@@ -25,6 +25,8 @@ Plug 'tpope/vim-speeddating'
 Plug 'leafgarland/typescript-vim'
 Plug 'jceb/vim-orgmode'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Initialize plugin system
 call plug#end()
@@ -226,8 +228,9 @@ let g:indentLine_color_term = 240
 let g:indentLine_color_gui = '#7070b0'
 "   }}}
 " - CtrlP {{{
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:10'
-let g:ctrlp_working_path_mode = 0   " Search from current file
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gr <Plug>(coc-references)
+nnoremap <C-p> :GFiles<CR>
 "   }}}
 " - Syntastic {{{
 set statusline+=%#warningmsg#
