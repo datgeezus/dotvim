@@ -172,6 +172,19 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'FugitiveStatusline'
       \ },
+      \ 'mode_map': {
+      \   'n' : 'N',
+      \   'i' : 'I',
+      \   'R' : 'R',
+      \   'v' : 'V',
+      \   'V' : 'VL',
+      \   "\<C-v>": 'VB',
+      \   'c' : 'C',
+      \   's' : 'S',
+      \   'S' : 'SL',
+      \   "\<C-s>": 'SB',
+      \   't': 'T',
+      \ },
       \ }
 "   }}}
 set noshowmode
@@ -180,10 +193,14 @@ let g:indentLine_char = '┆'
 let g:indentLine_color_term = 240
 let g:indentLine_color_gui = '#7070b0'
 "   }}}
-" - CtrlP {{{
+" - FZF {{{
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)
+nnoremap \ :Rg<CR>
+nnoremap <C-t> :Files<CR>
 nnoremap <C-p> :GFiles<CR>
+nnoremap <leader>b  :Buffers<CR>
+nnoremap <leader>/  :BLines<CR>
 "   }}}
 " - Syntastic {{{
 set statusline+=%#warningmsg#
