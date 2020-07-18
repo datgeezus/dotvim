@@ -4,15 +4,12 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'lervag/vimtex'
-Plug 'chriskempson/base16-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
-Plug 'klen/python-mode'
+Plug 'itchyny/lightline.vim'
 Plug 'Rykka/riv.vim'
 Plug 'scrooloose/syntastic'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -20,7 +17,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-speeddating'
+" Plug 'tpope/vim-speeddating'
 " Plug 'vimwiki/vimwiki'
 Plug 'leafgarland/typescript-vim'
 Plug 'jceb/vim-orgmode'
@@ -89,24 +86,7 @@ set background=dark     " dark background
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-" set background=light     " dark background
-if has ('gui_running')
-    " colorscheme mushroom
-    " colorscheme flatlandia
-    " let g:solarized_visibility = 'high'
-    " colorscheme solarized
-    " colorscheme papercolor
-    " colorscheme gruvbox
-    colorscheme base16-ocean
-else
-    colorscheme gruvbox
-    " let g:flatcolor_termcolors = 16
-    " colorscheme flatcolor
-    " let base16colorspace=256
-    " colorscheme base16-ocean
-    " colorscheme wildcherry
-endif
-
+colorscheme gruvbox
 set list
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set colorcolumn=80
@@ -183,45 +163,18 @@ nnoremap <F3> :set relativenumber!<CR>
 " }}}
 
 " PLUGINS {{{
-" - Airline {{{
-" -- UI
-let g:airline_mode_map = {
-            \ '__' : '-',
-            \ 'n'  : 'N',
-            \ 'i'  : 'I',
-            \ 'R'  : 'R',
-            \ 'c'  : 'C',
-            \ 'v'  : 'V',
-            \ 'V'  : 'V-L',
-            \ '' : 'V-B',
-            \ 's'  : 'S',
-            \ 'S'  : 'S-L',
-            \ }
-" let g:airline_theme = 'powerlineish'
-" let g:airline_theme = 'sol'
-let g:airline_theme = 'distinguished'
-" let g:airline_theme = 'base16'
-" let g:airline_theme = 'airlineish'
-" let g:airline_theme = 'PaperColor'
-let g:airline#extension#syntatic#enabled = 1
-let g:airline#extensions#ctrlp#show_adjacent_modes = 1
-let g:airline#extensions#tabline#enabled = 1
-" -- Buffers
-let g:airline#extensions#tabline#enabled = 1        " enable buffers
-let g:airline#extensions#tabline#left_sep = ' '     "
-let g:airline#extensions#tabline#left_alt_sep = '|' "
-let g:airline#extensions#tabline#fnamemod = ':t'    " show only names
-" -- Symbols
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_left_sep = '❯'    " Left separator
-let g:airline_right_sep = '❮'   " Right separator
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.whitespace = 'Ξ'
+" - Lighline {{{
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveStatusline'
+      \ },
+      \ }
 "   }}}
+set noshowmode
 " - Indent Line {{{
 let g:indentLine_char = '┆'
 let g:indentLine_color_term = 240
@@ -246,20 +199,9 @@ autocmd VimEnter * SyntasticToggleMode " disable syntastic by default
 let g:gitgutter_enabled = 0
 nnoremap <leader>g :GitGutterToggle<CR>
 "   }}}
-" - Python-mode {{{
-let g:pymode = 0
-"   }}}
 " - Riv {{{
 let g:riv_fold_auto_update = 0
 let g:riv_disable_folding = 1
-"   }}}
-" - python-syntax {{{
-let g:python_version_2 = 1
-lef g:python_highlight_builtins = 1
-let g:python_highlight_string_formatting = 1
-let g:python_highlight_string_format = 1
-let g:python_highlight_string_templates = 1
-let g:python_print_as_function = 1
 "   }}}
 " - vimtex {{{
 let g:tex_flavor = 'latex'
@@ -281,15 +223,10 @@ augroup configgroup
     autocmd BufEnter *.xaml setlocal filetype=xml
     autocmd BufEnter Makefile setlocal noexpandtab
     autocmd BufNewFile,BufRead *.xml setlocal tabstop=2
-    " autocmd BufNewFile,BufRead *.xml colorscheme papercolor
     autocmd BufNewFile,BufRead *.xml setlocal background=light
     autocmd BufNewFile,BufRead *.xml setlocal shiftwidth=2
     autocmd BufNewFile,BufRead *.xml setlocal softtabstop=2
     autocmd BufNewFile,BufRead *.xml setlocal nowrap
-    autocmd BufNewFile,BufRead *.xaml setlocal tabstop=2
-    autocmd BufNewFile,BufRead *.xaml setlocal shiftwidth=2
-    autocmd BufNewFile,BufRead *.xaml setlocal softtabstop=2
-    autocmd BufNewFile,BufRead *.xaml setlocal nowrap
     autocmd BufNewFile,BufRead *.json setlocal tabstop=2
     autocmd BufNewFile,BufRead *.json setlocal shiftwidth=2
     autocmd BufNewFile,BufRead *.json setlocal softtabstop=2
