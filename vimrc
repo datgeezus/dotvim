@@ -32,29 +32,11 @@ syntax on
 filetype plugin indent on
 set nocompatible
 
-if has('gui_running')
-    if has("win32")
-        " set guifont=Inconsolata:h10
-        " set guifont=Consolas:h10
-        set guifont=DejaVu\ Sans\ Mono:h8
-        source $VIMRUNTIME/mswin.vim
-        behave mswin
-    else
-        set guifont=DejaVu\ Sans\ Mono\ Book\ 8
-    endif
-
-    set guioptions -=T          " Hide the toolbar
-    set guioptions-=r           "remove right scroll bar
-    set guioptions-=L           "remove left scroll bar
-    set lines=100 columns =100  " Initial window size
-endif
-
 """ REMAPS
 noremap ; :
 map <space> <leader>
 let maplocalleader=","
 inoremap jk <ESC>
-
 
 " quick pairs
 imap <leader>' ''<ESC>i
@@ -164,34 +146,35 @@ nnoremap <F3> :set relativenumber!<CR>
 
 " PLUGINS {{{
 " - Lighline {{{
+set noshowmode  " hide default statusline
 let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveStatusline'
-      \ },
-      \ 'mode_map': {
-      \   'n' : 'N',
-      \   'i' : 'I',
-      \   'R' : 'R',
-      \   'v' : 'V',
-      \   'V' : 'VL',
-      \   "\<C-v>": 'VB',
-      \   'c' : 'C',
-      \   's' : 'S',
-      \   'S' : 'SL',
-      \   "\<C-s>": 'SB',
-      \   't': 'T',
-      \ },
-      \ }
+    \ 'colorscheme': 'gruvbox',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'FugitiveStatusline'
+    \ },
+    \ 'mode_map': {
+    \   'n' : 'N',
+    \   'i' : 'I',
+    \   'R' : 'R',
+    \   'v' : 'V',
+    \   'V' : 'VL',
+    \   "\<C-v>": 'VB',
+    \   'c' : 'C',
+    \   's' : 'S',
+    \   'S' : 'SL',
+    \   "\<C-s>": 'SB',
+    \   't': 'T',
+    \ },
+    \ }
 "   }}}
-set noshowmode
 " - Indent Line {{{
 let g:indentLine_char = '┆'
 let g:indentLine_color_term = 240
-let g:indentLine_color_gui = '#7070b0'
+let g:indentLine_color_gui = '#504945'
 "   }}}
 " - FZF {{{
 nmap <leader>gd <Plug>(coc-definition)
