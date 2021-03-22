@@ -3,12 +3,10 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'lervag/vimtex'
 Plug 'airblade/vim-gitgutter'
-Plug 'gruvbox-community/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
-Plug 'Rykka/riv.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -17,10 +15,8 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
-" Plug 'tpope/vim-speeddating'
-" Plug 'vimwiki/vimwiki'
-Plug 'leafgarland/typescript-vim'
-Plug 'jceb/vim-orgmode'
+Plug 'sheerun/vim-polyglot'
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -65,11 +61,14 @@ set hidden              " hidden buffers
 set showmatch           " highlight matching [{()}]
 set t_Co=256            " Colors
 set background=dark     " dark background
-set termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
+let g:gruvbox_material_background = 'hard'
+colorscheme gruvbox-material
+" colorscheme spaceduck
 set list
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set colorcolumn=80
@@ -149,7 +148,7 @@ nnoremap <F3> :set relativenumber!<CR>
 " - Lighline {{{
 set noshowmode  " hide default statusline
 let g:lightline = {
-    \ 'colorscheme': 'gruvbox',
+    \ 'colorscheme': 'spaceduck',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
