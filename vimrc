@@ -148,7 +148,7 @@ nnoremap <F3> :set relativenumber!<CR>
 " - Lighline {{{
 set noshowmode  " hide default statusline
 let g:lightline = {
-    \ 'colorscheme': 'spaceduck',
+    \ 'colorscheme': 'gruvbox_material',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
