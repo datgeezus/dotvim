@@ -208,22 +208,14 @@ let g:tex_flavor = 'latex'
 "   }}}
 " }}}
 
-" Orgmode {{{
-let g:org_agenda_files = ['~/org/*.org']
-" }}}
-
 " Autogorups {{{
 augroup configgroup
     autocmd!
-    " autocmd BufEnter * highlight OverLength ctermbg=darkgray guibg=#592929
-    " autocmd BufEnter * match OverLength /\%80v.*/
     autocmd FileType python setlocal foldmethod=indent
     autocmd FileType python setlocal foldnestmax=1
     autocmd BufNewFile,BufReadPost *.md set filetype=markdown   " .md files as markdown
-    autocmd BufEnter *.xaml setlocal filetype=xml
     autocmd BufEnter Makefile setlocal noexpandtab
     autocmd BufNewFile,BufRead *.xml setlocal tabstop=2
-    autocmd BufNewFile,BufRead *.xml setlocal background=light
     autocmd BufNewFile,BufRead *.xml setlocal shiftwidth=2
     autocmd BufNewFile,BufRead *.xml setlocal softtabstop=2
     autocmd BufNewFile,BufRead *.xml setlocal nowrap
